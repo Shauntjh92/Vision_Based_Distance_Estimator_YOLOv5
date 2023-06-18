@@ -1,5 +1,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+[![Watch the video](https://img.youtube.com/vi/Q8x87n14IUk/maxresdefault.jpg)](https://youtu.be/Q8x87n14IUk)
 
 The panoply of high risk activities in construction works necessitates close supervision and monitoring to ensure that the works are conducted in a safe manner. While most of the monitoring are currently done manually through standing or remote supervision, the increase in quantum of construction works coupled with the reduction in construction labour force calls for the need of a new approach of supervision. With computer vision techniques, close proximity of workers can be detected and highlighted to promote safety of the work place. This project explores the adoption of video analytic solutions including YOLO-based object detection, DeepSORT facial tracking as well distance approximation through stereo cameras.
 
