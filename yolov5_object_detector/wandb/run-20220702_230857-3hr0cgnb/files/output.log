@@ -1,0 +1,39 @@
+Traceback (most recent call last):
+  File "train.py", line 666, in <module>
+    main(opt)
+  File "train.py", line 561, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "train.py", line 91, in train
+    loggers = Loggers(save_dir, weights, opt, hyp, LOGGER)  # loggers instance
+  File "/Users/shauntoh/Documents/GitHub/yolov5/utils/loggers/__init__.py", line 82, in __init__
+    self.wandb = WandbLogger(self.opt, run_id)
+  File "/Users/shauntoh/Documents/GitHub/yolov5/utils/loggers/wandb/wandb_utils.py", line 180, in __init__
+    self.data_dict = check_wandb_dataset(opt.data)
+  File "/Users/shauntoh/Documents/GitHub/yolov5/utils/loggers/wandb/wandb_utils.py", line 48, in check_wandb_dataset
+    data_dict = yaml.safe_load(f)
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/composer.py", line 110, in compose_sequence_node
+    while not self.check_event(SequenceEndEvent):
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/Users/shauntoh/pytorch-test/env/lib/python3.8/site-packages/yaml/parser.py", line 483, in parse_flow_sequence_entry
+    raise ParserError("while parsing a flow sequence", self.marks[-1],
+yaml.parser.ParserError: while parsing a flow sequence
+  in "/Users/shauntoh/Documents/GitHub/yolov5/data/lta_data_2.yaml", line 18, column 8
+expected ',' or ']', but got '<scalar>'
+  in "/Users/shauntoh/Documents/GitHub/yolov5/data/lta_data_2.yaml", line 19, column 108

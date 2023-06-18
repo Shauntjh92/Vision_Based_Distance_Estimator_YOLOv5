@@ -1,0 +1,62 @@
+YOLOv5 temporarily requires wandb version 0.12.10 or below. Some features may not work as expected.
+                 from  n    params  module                                  arguments
+  0                -1  1      8800  models.common.Conv                      [3, 80, 6, 2, 2]
+  1                -1  1    115520  models.common.Conv                      [80, 160, 3, 2]
+  2                -1  4    309120  models.common.C3                        [160, 160, 4]
+  3                -1  1    461440  models.common.Conv                      [160, 320, 3, 2]
+  4                -1  8   2259200  models.common.C3                        [320, 320, 8]
+  5                -1  1   1844480  models.common.Conv                      [320, 640, 3, 2]
+  6                -1 12  13125120  models.common.C3                        [640, 640, 12]
+  7                -1  1   7375360  models.common.Conv                      [640, 1280, 3, 2]
+  8                -1  4  19676160  models.common.C3                        [1280, 1280, 4]
+  9                -1  1   4099840  models.common.SPPF                      [1280, 1280, 5]
+ 10                -1  1    820480  models.common.Conv                      [1280, 640, 1, 1]
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]
+ 13                -1  4   5332480  models.common.C3                        [1280, 640, 4, False]
+ 14                -1  1    205440  models.common.Conv                      [640, 320, 1, 1]
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]
+ 17                -1  4   1335040  models.common.C3                        [640, 320, 4, False]
+ 18                -1  1    922240  models.common.Conv                      [320, 320, 3, 2]
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]
+ 20                -1  4   4922880  models.common.C3                        [640, 640, 4, False]
+ 21                -1  1   3687680  models.common.Conv                      [640, 640, 3, 2]
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]
+ 23                -1  4  19676160  models.common.C3                        [1280, 1280, 4, False]
+ 24      [17, 20, 23]  1    269160  models.yolo.Detect                      [35, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [320, 640, 1280]]
+Model summary: 567 layers, 86446600 parameters, 86446600 gradients
+Transferred 745/745 items from runs/train/exp19/weights/last.pt
+Scaled weight_decay = 0.0005
+[34m[1moptimizer:[39m[22m SGD with parameter groups 123 weight (no decay), 126 weight, 126 bias
+[34m[1mtrain: [39m[22mScanning '/Users/shauntoh/Documents/GitHub/yolov5/Train_images/train/labe
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Train_images/train/images/lta105_20190404_01_450.jpg: ignoring corrupt image/label: image file is truncated (32500 bytes not processed)
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Train_images/train/images/lta105_20190404_01_511.jpg: ignoring corrupt image/label: image file is truncated (31165 bytes not processed)
+
+[34m[1mtrain: [39m[22mCaching images (1.3GB ram):  50%|████▉     | 1897/3827 [00:04<00:04, 415.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.3GB ram):  51%|█████     | 1939/3827 [00:04<00:04, 402.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.4GB ram):  52%|█████▏    | 1980/3827 [00:04<00:04, 392.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.4GB ram):  53%|█████▎    | 2020/3827 [00:04<00:04, 388.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.4GB ram):  54%|█████▍    | 2060/3827 [00:04<00:04, 386.Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.5GB ram):  55%|█████▍    | 2099/3827 [00:04<00:04, 387.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.5GB ram):  56%|█████▌    | 2138/3827 [00:05<00:04, 384.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+
+[34m[1mtrain: [39m[22mCaching images (2.6GB ram): 100%|██████████| 3827/3827 [00:08<00:00, 476.
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin

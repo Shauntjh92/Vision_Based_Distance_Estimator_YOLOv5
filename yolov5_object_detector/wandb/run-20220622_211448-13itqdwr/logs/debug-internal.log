@@ -1,0 +1,36 @@
+2022-06-22 21:14:49,321 INFO    MainThread:31285 [internal.py:wandb_internal():90] W&B internal server running at pid: 31285, started at: 2022-06-22 21:14:49.321576
+2022-06-22 21:14:49,322 INFO    WriterThread:31285 [datastore.py:open_for_write():75] open: /Users/shauntoh/Documents/GitHub/yolov5/wandb/run-20220622_211448-13itqdwr/run-13itqdwr.wandb
+2022-06-22 21:14:49,323 DEBUG   SenderThread:31285 [sender.py:send():235] send: header
+2022-06-22 21:14:49,323 DEBUG   SenderThread:31285 [sender.py:send():235] send: run
+2022-06-22 21:14:49,327 INFO    SenderThread:31285 [sender.py:_maybe_setup_resume():492] checking resume status for None/YOLOv5/13itqdwr
+2022-06-22 21:14:49,894 INFO    SenderThread:31285 [dir_watcher.py:__init__():205] watching files in: /Users/shauntoh/Documents/GitHub/yolov5/wandb/run-20220622_211448-13itqdwr/files
+2022-06-22 21:14:49,894 INFO    SenderThread:31285 [sender.py:_start_run_threads():812] run started: 13itqdwr with start time 1655903688
+2022-06-22 21:14:49,895 DEBUG   HandlerThread:31285 [handler.py:handle_request():141] handle_request: check_version
+2022-06-22 21:14:49,895 DEBUG   SenderThread:31285 [sender.py:send():235] send: summary
+2022-06-22 21:14:49,895 INFO    SenderThread:31285 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-22 21:14:49,896 DEBUG   SenderThread:31285 [sender.py:send_request():249] send_request: check_version
+2022-06-22 21:14:49,988 DEBUG   HandlerThread:31285 [handler.py:handle_request():141] handle_request: run_start
+2022-06-22 21:14:49,989 DEBUG   HandlerThread:31285 [meta.py:__init__():35] meta init
+2022-06-22 21:14:49,989 DEBUG   HandlerThread:31285 [meta.py:__init__():49] meta init done
+2022-06-22 21:14:49,990 DEBUG   HandlerThread:31285 [meta.py:probe():209] probe
+2022-06-22 21:14:49,995 DEBUG   HandlerThread:31285 [meta.py:_setup_git():199] setup git
+2022-06-22 21:14:50,025 DEBUG   HandlerThread:31285 [meta.py:_setup_git():206] setup git done
+2022-06-22 21:14:50,025 DEBUG   HandlerThread:31285 [meta.py:_save_pip():53] save pip
+2022-06-22 21:14:50,026 DEBUG   HandlerThread:31285 [meta.py:_save_pip():67] save pip done
+2022-06-22 21:14:50,026 DEBUG   HandlerThread:31285 [meta.py:_save_conda():74] save conda
+2022-06-22 21:14:50,900 INFO    Thread-7  :31285 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/shauntoh/Documents/GitHub/yolov5/wandb/run-20220622_211448-13itqdwr/files/requirements.txt
+2022-06-22 21:14:50,901 INFO    Thread-7  :31285 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/shauntoh/Documents/GitHub/yolov5/wandb/run-20220622_211448-13itqdwr/files/wandb-summary.json
+2022-06-22 21:14:50,901 INFO    Thread-7  :31285 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/shauntoh/Documents/GitHub/yolov5/wandb/run-20220622_211448-13itqdwr/files/conda-environment.yaml
+2022-06-22 21:14:51,434 DEBUG   HandlerThread:31285 [meta.py:_save_conda():84] save conda done
+2022-06-22 21:14:51,434 DEBUG   HandlerThread:31285 [meta.py:probe():247] probe done
+2022-06-22 21:14:51,481 DEBUG   SenderThread:31285 [sender.py:send():235] send: telemetry
+2022-06-22 21:14:51,481 DEBUG   SenderThread:31285 [sender.py:send():235] send: files
+2022-06-22 21:14:51,481 INFO    SenderThread:31285 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2022-06-22 21:14:51,483 DEBUG   HandlerThread:31285 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-22 21:14:51,483 DEBUG   SenderThread:31285 [sender.py:send_request():249] send_request: stop_status
+2022-06-22 21:14:51,737 DEBUG   SenderThread:31285 [sender.py:send():235] send: telemetry
+2022-06-22 21:14:51,737 DEBUG   SenderThread:31285 [sender.py:send():235] send: config
+2022-06-22 21:14:51,905 INFO    Thread-7  :31285 [dir_watcher.py:_on_file_modified():269] file/dir modified: /Users/shauntoh/Documents/GitHub/yolov5/wandb/run-20220622_211448-13itqdwr/files/conda-environment.yaml
+2022-06-22 21:14:51,905 INFO    Thread-7  :31285 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/shauntoh/Documents/GitHub/yolov5/wandb/run-20220622_211448-13itqdwr/files/wandb-metadata.json
+2022-06-22 21:14:51,905 INFO    Thread-7  :31285 [dir_watcher.py:_on_file_created():256] file/dir created: /Users/shauntoh/Documents/GitHub/yolov5/wandb/run-20220622_211448-13itqdwr/files/output.log
+2022-06-22 21:14:52,149 INFO    Thread-11 :31285 [upload_job.py:push():132] Uploaded file /var/folders/dy/k6vdywx92wjd49pff5_8w88w0000gn/T/tmp6ibugwvbwandb/2v04zmby-wandb-metadata.json

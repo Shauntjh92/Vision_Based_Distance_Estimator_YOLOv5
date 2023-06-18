@@ -1,0 +1,2335 @@
+YOLOv5 temporarily requires wandb version 0.12.10 or below. Some features may not work as expected.
+                 from  n    params  module                                  arguments
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]
+ 24      [17, 20, 23]  1    107880  models.yolo.Detect                      [35, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+Model summary: 270 layers, 7114024 parameters, 7114024 gradients
+Transferred 349/349 items from runs/train/exp20/weights/last.pt
+Scaled weight_decay = 0.0005
+[34m[1moptimizer:[39m[22m SGD with parameter groups 57 weight (no decay), 60 weight, 60 bias
+[34m[1mtrain: [39m[22mScanning '/Users/shauntoh/Documents/GitHub/yolov5/Train_images/train/labe
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Train_images/train/images/lta105_20190404_01_450.jpg: ignoring corrupt image/label: image file is truncated (32500 bytes not processed)
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Train_images/train/images/lta105_20190404_01_511.jpg: ignoring corrupt image/label: image file is truncated (31165 bytes not processed)
+
+[34m[1mtrain: [39m[22mCaching images (1.3GB ram):  49%|████▉     | 1877/3827 [00:04<00:04, 417.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.4GB ram):  51%|█████▏    | 1962/3827 [00:04<00:04, 412.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.4GB ram):  52%|█████▏    | 2005/3827 [00:04<00:04, 409.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.4GB ram):  54%|█████▎    | 2049/3827 [00:04<00:04, 417.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.4GB ram):  55%|█████▍    | 2093/3827 [00:04<00:04, 411.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+[34m[1mtrain: [39m[22mCaching images (1.5GB ram):  56%|█████▌    | 2135/3827 [00:05<00:04, 413.Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: premature end of data segment
+
+
+[34m[1mtrain: [39m[22mCaching images (2.6GB ram): 100%|██████████| 3827/3827 [00:08<00:00, 453.
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mval: [39m[22mScanning '/Users/shauntoh/Documents/GitHub/yolov5/Train_images/val/labels.c
+
+[34m[1mval: [39m[22mCaching images (0.3GB ram): 100%|██████████| 450/450 [00:01<00:00, 300.02it
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to [1mruns/train/exp20
+Starting training for 300 epochs...
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     1/299        0G   0.06931   0.04533   0.01819       166       640: 100%|███
+               Class     Images     Labels          P          R     mAP@.5 mAP@
+                 all        450       1467      0.465      0.101     0.0571     0.0213
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     2/299        0G   0.05949   0.04331   0.01237       250       640: 100%|███
+               Class     Images     Labels          P          R     mAP@.5 mAP@
+                 all        450       1467      0.726        0.1     0.0952     0.0321
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     3/299        0G   0.05043    0.0404   0.00978       214       640: 100%|███
+               Class     Images     Labels          P          R     mAP@.5 mAP@
+                 all        450       1467      0.949      0.135      0.149     0.0532
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+     4/299        0G    0.0395   0.02692  0.009844       196       640:   1%|
+     4/299        0G   0.04195   0.03018  0.008427       261       640:   2%|▏
+     4/299        0G   0.04292   0.03413  0.008453       312       640:   2%|▎
+     4/299        0G   0.04357    0.0384  0.009147       372       640:   3%|▎
+     4/299        0G   0.04392   0.03895  0.009049       321       640:   4%|▍
+     4/299        0G   0.04405   0.03947  0.008764       323       640:   5%|▌
+     4/299        0G   0.04448   0.03859  0.008613       237       640:   6%|▌
+     4/299        0G   0.04499   0.03873  0.008682       296       640:   7%|▋
+     4/299        0G    0.0455   0.03824  0.008556       272       640:   8%|▊
+     4/299        0G   0.04581   0.03843  0.008599       305       640:   8%|▊
+     4/299        0G   0.04547   0.03807  0.008521       252       640:   9%|▉
+     4/299        0G   0.04524   0.03833  0.008507       311       640:  10%|█
+     4/299        0G   0.04509    0.0387   0.00849       301       640:  11%|█
+     4/299        0G   0.04503   0.03927  0.008499       345       640:  12%|█▏
+     4/299        0G   0.04482   0.03961  0.008488       344       640:  12%|█▎
+     4/299        0G   0.04461   0.03983  0.008546       319       640:  13%|█▎
+     4/299        0G   0.04478   0.03934  0.008575       230       640:  14%|█▍
+     4/299        0G   0.04467   0.03915   0.00856       270       640:  15%|█▌
+     4/299        0G   0.04457   0.03876  0.008557       229       640:  16%|█▌
+     4/299        0G    0.0445   0.03872  0.008541       297       640:  17%|█▋
+     4/299        0G   0.04465   0.03896  0.008553       350       640:  18%|█▊
+     4/299        0G   0.04473   0.03867   0.00863       249       640:  18%|█▊
+     4/299        0G   0.04474   0.03877  0.008671       310       640:  19%|█▉
+     4/299        0G   0.04479   0.03874  0.008667       280       640:  20%|██
+     4/299        0G   0.04487   0.03863  0.008652       281       640:  21%|██
+     4/299        0G   0.04492   0.03895  0.008662       373       640:  22%|██▏
+     4/299        0G   0.04498   0.03872  0.008633       224       640:  22%|██▎
+     4/299        0G   0.04491   0.03858  0.008623       275       640:  23%|██▎
+     4/299        0G   0.04491   0.03837  0.008674       240       640:  24%|██▍
+     4/299        0G   0.04501   0.03848  0.008642       309       640:  25%|██▌
+     4/299        0G   0.04491   0.03835  0.008713       261       640:  26%|██▌
+     4/299        0G    0.0449    0.0383  0.008693       271       640:  27%|██▋
+     4/299        0G   0.04489   0.03818  0.008645       265       640:  28%|██▊
+     4/299        0G   0.04488   0.03787  0.008719       192       640:  28%|██▊
+     4/299        0G   0.04485   0.03776  0.008714       260       640:  29%|██▉
+     4/299        0G    0.0448   0.03782  0.008702       298       640:  30%|███
+     4/299        0G   0.04496   0.03769  0.008678       279       640:  31%|███
+     4/299        0G   0.04502   0.03765  0.008644       269       640:  32%|███
+     4/299        0G   0.04506   0.03758  0.008629       256       640:  32%|███
+     4/299        0G   0.04517   0.03771  0.008575       328       640:  33%|███
+     4/299        0G   0.04523   0.03797  0.008568       356       640:  34%|███
+     4/299        0G   0.04519     0.038   0.00856       271       640:  35%|███
+     4/299        0G   0.04511   0.03819  0.008593       349       640:  36%|███
+     4/299        0G   0.04498   0.03817   0.00858       280       640:  37%|███
+     4/299        0G   0.04493   0.03812  0.008576       278       640:  38%|███
+     4/299        0G   0.04491   0.03829  0.008555       345       640:  38%|███
+     4/299        0G   0.04483   0.03842  0.008552       332       640:  39%|███
+     4/299        0G   0.04478   0.03842  0.008538       304       640:  40%|███
+     4/299        0G   0.04472   0.03838  0.008506       252       640:  41%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+     4/299        0G   0.04467   0.03843  0.008493       316       640:  42%|███
+               Class     Images     Labels          P          R     mAP@.5 mAP@
+               Class     Images     Labels          P          R     mAP@.5 mAP@
+               Class     Images     Labels          P          R     mAP@.5 mAP@
+               Class     Images     Labels          P          R     mAP@.5 mAP@
+               Class     Images     Labels          P          R     mAP@.5 mAP@
+               Class     Images     Labels          P          R     mAP@.5 mAP@
+               Class     Images     Labels          P          R     mAP@.5 mAP@
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.148     0.0495
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0495
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0495
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0495
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0495
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0495
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0495
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0495
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.136     0.0504
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0504
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0504
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0504
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0504
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0504
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0504
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0504
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.133     0.0487
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0487
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0487
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0487
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0487
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0487
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0487
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0487
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.149     0.0664
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0664
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0664
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0664
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0664
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0664
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0664
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0664
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.142      0.058
+               Class     Images     Labels          P          R     mAP@.5 mAP@ 0.058
+               Class     Images     Labels          P          R     mAP@.5 mAP@ 0.058
+               Class     Images     Labels          P          R     mAP@.5 mAP@ 0.058
+               Class     Images     Labels          P          R     mAP@.5 mAP@ 0.058
+               Class     Images     Labels          P          R     mAP@.5 mAP@ 0.058
+               Class     Images     Labels          P          R     mAP@.5 mAP@ 0.058
+               Class     Images     Labels          P          R     mAP@.5 mAP@ 0.058
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.156     0.0578
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0578
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0578
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0578
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0578
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0578
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0578
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0578
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.13     0.0476
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0476
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0476
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0476
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0476
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0476
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0476
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0476
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0348
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0348
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0348
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0348
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0348
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0348
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0348
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0348
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.117     0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0433
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0433
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0433
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0433
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0433
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0433
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0433
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0433
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.113     0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0399
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size 0.12     0.0434
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0434
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0434
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0434
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0434
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0434
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0434
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0434
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size0.116     0.0455
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0455
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0455
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0455
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0455
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0455
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0455
+               Class     Images     Labels          P          R     mAP@.5 mAP@0.0455
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0884     0.0338

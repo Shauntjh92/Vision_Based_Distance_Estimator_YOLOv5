@@ -1,0 +1,9 @@
+YOLOv5 temporarily requires wandb version 0.12.10 or below. Some features may not work as expected.
+Traceback (most recent call last):
+  File "train.py", line 666, in <module>
+    main(opt)
+  File "train.py", line 561, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "train.py", line 110, in train
+    assert len(names) == nc, f'{len(names)} names found for nc={nc} dataset in {data}'  # check
+AssertionError: 34 names found for nc=35 dataset in /Users/shauntoh/Documents/GitHub/yolov5/data/lta_data_2.yaml

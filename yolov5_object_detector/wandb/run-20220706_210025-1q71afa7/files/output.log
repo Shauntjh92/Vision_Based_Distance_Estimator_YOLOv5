@@ -1,0 +1,17 @@
+Dataset not found ⚠, missing paths ['/Documents/GitHub/yolov5/Train_images/val/images']
+Traceback (most recent call last):
+  File "train.py", line 666, in <module>
+    main(opt)
+  File "train.py", line 561, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "train.py", line 91, in train
+    loggers = Loggers(save_dir, weights, opt, hyp, LOGGER)  # loggers instance
+  File "/Users/shauntoh/Documents/GitHub/yolov5/utils/loggers/__init__.py", line 82, in __init__
+    self.wandb = WandbLogger(self.opt, run_id)
+  File "/Users/shauntoh/Documents/GitHub/yolov5/utils/loggers/wandb/wandb_utils.py", line 180, in __init__
+    self.data_dict = check_wandb_dataset(opt.data)
+  File "/Users/shauntoh/Documents/GitHub/yolov5/utils/loggers/wandb/wandb_utils.py", line 56, in check_wandb_dataset
+    return check_dataset(data_file)
+  File "/Users/shauntoh/Documents/GitHub/yolov5/utils/general.py", line 487, in check_dataset
+    raise Exception(emojis('Dataset not found ❌'))
+Exception: Dataset not found ❌

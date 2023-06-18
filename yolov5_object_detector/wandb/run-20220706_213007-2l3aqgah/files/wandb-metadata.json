@@ -1,0 +1,36 @@
+{
+    "os": "macOS-12.4-arm64-arm-64bit",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-07-06T13:30:09.389809",
+    "startedAt": "2022-07-06T13:30:07.185702",
+    "docker": null,
+    "cpu_count": 10,
+    "cuda": null,
+    "args": [
+        "--device",
+        "mps",
+        "--img",
+        "640",
+        "--batch",
+        "32",
+        "--epochs",
+        "300",
+        "--data",
+        "lta_data_2.yaml",
+        "--weights",
+        "yolov5s.pt",
+        "--cache"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/ultralytics/yolov5.git",
+        "commit": "fdc9d9198e0dea90d0536f63b6408b97b1399cc1"
+    },
+    "email": "shauntjh92@gmail.com",
+    "root": "/Users/shauntoh/Documents/GitHub/yolov5",
+    "host": "Shauns-MBP",
+    "username": "shauntoh",
+    "executable": "/Users/shauntoh/pytorch-test/env/bin/python"
+}

@@ -1,0 +1,503 @@
+YOLOv5 temporarily requires wandb version 0.12.10 or below. Some features may not work as expected.
+Overriding model.yaml nc=80 with nc=20
+                 from  n    params  module                                  arguments
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]
+ 24      [17, 20, 23]  1     67425  models.yolo.Detect                      [20, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+Model summary: 270 layers, 7073569 parameters, 7073569 gradients
+Transferred 343/349 items from yolov5s.pt
+Scaled weight_decay = 0.0005
+[34m[1moptimizer:[39m[22m SGD with parameter groups 57 weight (no decay), 60 weight, 60 bias
+[34m[1mtrain: [39m[22mScanning '/Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/19_crane
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2007_000392.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2007_002669.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2007_004454.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2007_005748.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2007_007341.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2007_009139.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2008_000243.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2008_000435.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2008_000481.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2008_000548.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2008_000607.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2008_000629.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+[34m[1mtrain: [39m[22mWARNING: /Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/train/4_person/4_person_2008_000645.jpg: ignoring corrupt image/label: only integer scalar arrays can be converted to a scalar index
+
+
+
+
+
+[34m[1mtrain: [39m[22mCaching images (9.4GB ram): 100%|██████████| 10959/10959 [00:09<00:00, 11
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mval: [39m[22mScanning '/Users/shauntoh/Documents/GitHub/yolov5/Data_LTA/val/19_crane.cac
+[34m[1mval: [39m[22mCaching images (1.1GB ram): 100%|██████████| 1323/1323 [00:01<00:00, 669.35
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Currently logged in as: [33mshaunjth92[39m. Use [1m`wandb login --relogin`[22m to force relogin
+Plotting labels to runs/train/exp10/labels.jpg...
+[34m[1mAutoAnchor: [39m[22m4.17 anchors/target, 0.994 Best Possible Recall (BPR). Current anchors are a good fit to dataset ✅
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to [1mruns/train/exp10
+Starting training for 200 epochs...
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
